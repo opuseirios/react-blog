@@ -1,0 +1,60 @@
+@import "./variable";
+
+body{
+  padding-top: 40px;
+  min-height: 100%;
+}
+
+a:hover{
+  border-bottom: 3px solid @main-color;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+.avatar{
+  border-radius: 3px;
+  width: 48px;
+  height: 48px;
+  float: right;
+}
+
+.nav{
+  margin-bottom: 20px;
+  color: @text-color;
+  text-align: center;
+}
+
+.nav h1{
+  color: @main-color;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.nav-setting{
+  position: fixed;
+  right: 30px;
+  top: 35px;
+  z-index: 999;
+}
+
+.post-content h3 a{
+  color: @main-color !important;
+}
+
+.post-content .tag{
+  font-size: 13px;
+  margin-right: 5px;
+  color: @text-color;
+}
+
+.post-content .tag.right{
+  float: right;
+  margin-right: 0;
+}
+
+.post-content .tag.right a{
+  color: @text-color;
+}
