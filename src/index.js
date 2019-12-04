@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './assets/less/global.less';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Register from './pages/register/register'
+import Login from './pages/login/login'
+import {Provider} from 'react-redux'
+import store from './store'
 
 ReactDOM.render((
-  <BrowserRouter>
-    <Switch>
-      <Route path='/register' component={Register} />
-    </Switch>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/register' component={Register} />
+        <Route path='/login' component={Login} />
+      </Switch>
+    </BrowserRouter>
+  </Provider>
 ), document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
